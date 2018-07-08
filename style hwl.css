@@ -1,0 +1,94 @@
+/*
+Theme Name:     Pentamint Custom Theme Divi
+Theme URI:      https://www.pentamint.com
+Description:    Pentamint customizations for Divi Theme
+Author:         Pentamint Co., Ltd.
+Author URI:     https://www.pentamint.com
+Template:       Pentamint Divi
+Version:        1.0.0
+*/
+
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+
+/* ========== SITE SPECIFIC CSS ========== */
+a:hover {
+  text-decoration: none !important;
+}
+/* Header Design */
+.site-header {
+  background: #6dad98; /* Old browsers */
+  background: -moz-linear-gradient(left, #6dad98 0%, #bed7c7 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #6dad98 0%,#bed7c7 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #6dad98 0%,#bed7c7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6dad98', endColorstr='#bed7c7',GradientType=1 ); /* IE6-9 */
+}
+.main-navigation li {
+  font-weight: 700;
+}
+.is-desktop nav.subheader .menu.nav>li.menu-item>a, .is-desktop nav.subheader .menu>li>b {
+  height: 4em;
+}
+.main-navigation li a, .main-navigation div>ul>.current-menu-ancestor>a, .main-navigatio div>ul>.current-menu-item>a {
+  color: #fff !important;
+}
+.main-navigation li a:hover, .main-navigation .nav-menu > li:hover > a:hover, .main-navigation div > ul > .current-menu-item > a:hover, .main-navigation div > ul > .current-menu-ancestor > a:hover {
+  color: #8e3655;
+}
+.header-button {
+  color: #fff;
+}
+.header-notifications a#user-messages span:before, .header-notifications a.notification-link span:before {
+  color: #fff !important;
+}
+.main-navigation .sub-menu li a {
+    color: #777 !important;
+    font-weight: 400;
+}
+/* Herolink Design */
+.row-hero1, .row-hero2 {
+  margin-bottom: 2em;
+}
+.col-xs-2 {
+  background-color: #6dad98;
+  padding: 2em 1em 1.75em 1em;
+}
+.col-half-offset {
+    margin-left:4.166666667%;
+}
+.col-xs-2 i, .col-xs-2 .herolink {
+  display: block;
+  text-align: center;
+  margin-bottom: .315em;
+}
+.fa {
+  font-size: 4em;
+  color: #fff;
+}
+img.fa {
+  margin: 0 auto;
+  display: block;
+  max-height: 1em;
+  margin-bottom: .315em;
+}
+.col-xs-2 .herolink {
+  color:#fff;
+  font-weight: 700;
+}
+/* ----- Responsive Styles Large Devices ----- */
+@media screen and (min-width:1040px) {
+
+}
+/* ----- Responsive Styles Tablets &amp; Small Devices ----- */
+@media screen and (min-width:481px) {
+  .site-header .site-title {
+    width: 9em;
+  }
+}
+/* ----- Responsive Styles Smartphones ----- */
+@media screen and (max-width:480px) {
+
+}
+/* ========== /SITE SPECIFIC CSS ========== */
+
+/* ========== 추가 모듈 CSS ========== */
