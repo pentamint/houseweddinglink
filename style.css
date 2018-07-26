@@ -17,7 +17,7 @@ a:hover {
 }
 /* Header Design */
 .site-header {
-  background: #6dad98; /* Old browsers */
+  background: #6dad98; /* old browsers */
   background: -moz-linear-gradient(left, #6dad98 0%, #bed7c7 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #6dad98 0%,#bed7c7 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #6dad98 0%,#bed7c7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -48,6 +48,8 @@ a:hover {
 /* Herolink Design */
 .row-hero1, .row-hero2 {
   margin-bottom: 2em;
+  margin-right: 15px !important; /* alignment fix */
+  margin-left: -15px !important; /* alignment fix */
 }
 .col-xs-2 {
   background-color: #6dad98;
@@ -74,6 +76,15 @@ img.fa {
 .col-xs-2 .herolink {
   color:#fff;
   font-weight: 700;
+}
+/* Shop Page Design */
+/* Fixed sidebar */
+.tax-product_cat #primary {
+  margin-left: 305px;
+}
+.tax-product_cat #secondary {
+  position: fixed;
+  left: calc((100vw - 1170px) /2);
 }
 /* ----- Responsive Styles Large Devices ----- */
 @media screen and (min-width:1040px) {
