@@ -61,7 +61,7 @@ a:hover {
   text-align: center;
   margin-bottom: .315em;
 }
-.fa {
+.row-hero1 .fa, .row-hero2 .fa {
   font-size: 4em;
   color: #fff;
 }
