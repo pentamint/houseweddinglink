@@ -60,5 +60,4 @@ add_action( 'wp_enqueue_scripts', 'onesocial_child_theme_scripts_styles', 9999 )
 // Remove Gravatar
 add_filter('bp_core_fetch_avatar_no_grav', '__return_true');
 
-
 ?>

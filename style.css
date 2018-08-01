@@ -1,19 +1,41 @@
 /*
-Theme Name:     Pentamint Custom Theme Divi
+Theme Name:     Pentamint Custom Onesocial Theme
 Theme URI:      https://www.pentamint.com
-Description:    Pentamint customizations for Divi Theme
+Description:    Pentamint customizations for Onesocial Theme
 Author:         Pentamint Co., Ltd.
 Author URI:     https://www.pentamint.com
-Template:       Pentamint Divi
-Version:        1.0.0
+Template:       Pentamint Onesocial
+Version:        1.0.3
 */
 
-@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+/* <link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic|Roboto" rel="stylesheet"> */
+
+/* ========== PENTAMINT GLOBAL ========== */
+body { /* default font design */
+  -webkit-tap-highlight-color: transparent;
+  word-break: keep-all;
+  font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+}
+a { /* default link & animation */
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
+    text-decoration: none !important;
+}
+h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
+  font-family: 'Nanum Gothic', 'Montserrat', sans-serif;
+}
+/* ========== PENTAMINT GLOBAL END ========== */
 
 /* ========== SITE SPECIFIC CSS ========== */
-a:hover {
-  text-decoration: none !important;
+.subheader .nav .sub-menu a, .subheader .sub-menu .children a { /* buddyboss reset font design */
+  font-size: 1em;
+  color: #333;
+  font-weight: 400;
 }
 /* Header Design */
 .site-header {
@@ -45,6 +67,15 @@ a:hover {
     color: #777 !important;
     font-weight: 400;
 }
+/* Herobanner Design */
+.bb-slider-container {
+  max-height: 550px;
+}
+.bb-slide img {
+  max-height: 550px;
+  object-fit: cover;
+}
+/* Herobanner Design End */
 /* Herolink Design */
 .row-hero1, .row-hero2 {
   margin-bottom: 2em;
@@ -67,6 +98,51 @@ a:hover {
   font-size: 4em;
   color: #fff;
 }
+/* Herolink row animation */
+.title-large {
+  -webkit-animation: herotitle 3s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+  animation: herotitle 3s;
+  animation-timing-function: linear;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes herotitle {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes herotitle {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.row-hero1, .row-hero2 {
+  -webkit-animation: herorow 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+  animation: herorow 1s;
+  animation-timing-function: linear;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes herorow {
+    from {margin-top: 40px;}
+    to {margin-top: 0;}
+}
+@keyframes herorow {
+    from {margin-top: 40px;}
+    to {margin-top: 0;}
+}
+.row-hero1 img, .row-hero2 img {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+/* Herolink row animation end */
+.fa-map-marker-alt:before, .fa-bullhorn:before {
+  -webkit-animation: faani .6s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+  animation: faani .6s;
+  animation-timing-function: linear;
+}
 img.fa {
   margin: 0 auto;
   display: block;
@@ -79,13 +155,13 @@ img.fa {
 }
 /* Shop Page Design */
 /* Fixed sidebar */
-.tax-product_cat #primary {
+/* .tax-product_cat #primary {
   margin-left: 305px;
 }
 .tax-product_cat #secondary {
   position: fixed;
   left: calc((100vw - 1170px) /2);
-}
+} */
 /* ----- Responsive Styles Large Devices ----- */
 @media screen and (min-width:1040px) {
 
@@ -98,7 +174,35 @@ img.fa {
 }
 /* ----- Responsive Styles Smartphones ----- */
 @media screen and (max-width:480px) {
-
+  .right-btn:before {
+    font-size: 2rem; /* resize hamburger menu */
+  }
+  .home-page #page {
+    padding-top: 1em; /* adjust padding top */
+  }
+  .title-large {
+    font-size: 1.5em !important; /* resize row title font size */
+  }
+  .row-hero1, .row-hero2 {
+    margin-right: -15px !important; /* counter patch desktop herorow layout fix */
+  }
+  .row-hero1 .fa, .row-hero2 .fa {
+    font-size: 1.5em; /* resize herolink icon size */
+  }
+  .entry-content, .entry-summary, .mu_register {
+    font-size: .8125em; /* resize herolink text size */
+  }
+  .row-hero1 .col-xs-2, .row-hero2 .col-xs-2 {
+    padding: .75em 0 .25em 0 !important;
+    height: 7rem !important;
+    line-height: 7rem !important;
+  }
+  .row-hero1 .col-xs-2 .herolink, .row-hero2 .col-xs-2 .herolink {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
 }
 /* ========== /SITE SPECIFIC CSS ========== */
 
