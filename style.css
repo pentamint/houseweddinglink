@@ -8,7 +8,7 @@ Template:       Pentamint Onesocial
 Version:        1.0.3
 */
 
-/* <link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic|Roboto" rel="stylesheet"> */
+/*  */
 
 /* ========== PENTAMINT GLOBAL ========== */
 body { /* default font design */
@@ -18,7 +18,7 @@ body { /* default font design */
   font-size: 100%;
   font-weight: normal;
 }
-a { /* default link & animation */
+a { /* default link &amp; animation */
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -66,6 +66,9 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
 .main-navigation .sub-menu li a {
     color: #777 !important;
     font-weight: 400;
+}
+.cart-button.boss-tooltip:after { /* cart data-tooltip text change */
+  content: "문의요청함"
 }
 /* Herobanner Design */
 .bb-slider-container {
@@ -115,9 +118,9 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
     to {opacity: 1;}
 }
 .row-hero1, .row-hero2 {
-  -webkit-animation: herorow 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation: herorow .3s; /* Safari 4.0 - 8.0 */
   -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
-  animation: herorow 1s;
+  animation: herorow .3s;
   animation-timing-function: linear;
 }
 /* Safari 4.0 - 8.0 */
@@ -178,7 +181,7 @@ img.fa {
     font-size: 2rem; /* resize hamburger menu */
   }
   .home-page #page {
-    padding-top: 1em; /* adjust padding top */
+    padding-top: 0; /* remove padding top */
   }
   .title-large {
     font-size: 1.5em !important; /* resize row title font size */

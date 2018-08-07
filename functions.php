@@ -60,4 +60,41 @@ add_action( 'wp_enqueue_scripts', 'onesocial_child_theme_scripts_styles', 9999 )
 // Remove Gravatar
 add_filter('bp_core_fetch_avatar_no_grav', '__return_true');
 
+/**
+ * Add the product's short description (excerpt) to the WooCommerce shop/category pages. The description displays after the product's nam$
+ *
+ * Ref: https://gist.github.com/om4james/9883140
+ *
+ */
+function woocommerce_after_shop_loop_item_title_short_description() {
+        global $product;
+        if ( ! $product->post->post_excerpt ) return;
+        ?>
+        <div itemprop="description">
+                <?php echo apply_filters( 'woocommerce_short_description', $product->post->post_excerpt ) ?>
+        </div>
+        <?php
+}
+add_action('woocommerce_after_shop_loop_item_title', 'woocommerce_after_shop_loop_item_title_short_description', 5);
+
+/**
+ * Use it like [my_orders order_counts=10] (order_counts is optional, if missing it lists all the orders).
+ *
+ * Ref: https://stackoverflow.com/questions/29980505/in-woocommerce-is-there-a-shortcode-page-to-view-all-orders
+ *
+ */
+function shortcode_my_orders( $atts ) {
+    extract( shortcode_atts( array(
+        'order_count' => -1
+    ), $atts ) );
+
+    ob_start();
+    wc_get_template( 'myaccount/my-orders.php', array(
+        'current_user'  => get_user_by( 'id', get_current_user_id() ),
+        'order_count'   => $order_count
+    ) );
+    return ob_get_clean();
+}
+add_shortcode('my_orders', 'shortcode_my_orders');
+
 ?>
