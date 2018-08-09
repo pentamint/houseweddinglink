@@ -32,10 +32,8 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
 /* ========== PENTAMINT GLOBAL END ========== */
 
 /* ========== SITE SPECIFIC CSS ========== */
-.subheader .nav .sub-menu a, .subheader .sub-menu .children a { /* buddyboss reset font design */
-  font-size: 1em;
-  color: #333;
-  font-weight: 400;
+.price {
+  display: none !important; /* remove pricing */
 }
 /* Header Design */
 .site-header {
@@ -44,6 +42,11 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
   background: -webkit-linear-gradient(left, #6dad98 0%,#bed7c7 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #6dad98 0%,#bed7c7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6dad98', endColorstr='#bed7c7',GradientType=1 ); /* IE6-9 */
+}
+.subheader .nav .sub-menu a, .subheader .sub-menu .children a { /* buddyboss reset font design */
+  font-size: 1em;
+  color: #333;
+  font-weight: 400;
 }
 .main-navigation li {
   font-weight: 700;
@@ -69,6 +72,17 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
 }
 .cart-button.boss-tooltip:after { /* cart data-tooltip text change */
   content: "문의요청함"
+}
+/* Mobile Header Design */
+#mobile-header { /* change mobile header background */
+  background-color: #6dad98;
+  position: relative; /* detach overlapping header and innerwrap */
+}
+.home #mobile-header {
+  margin-bottom: 5px; /* add bottom spacing home header */
+}
+.is-mobile .subheader {
+  display: none; /* remove category menu */
 }
 /* Herobanner Design */
 .bb-slider-container {
@@ -156,6 +170,20 @@ img.fa {
   color:#fff;
   font-weight: 700;
 }
+/* Herolink Design End */
+/* VC Hover Box Design */
+.vc_btn3.vc_btn3-color-success, .vc_btn3.vc_btn3-color-success.vc_btn3-style-flat, .vc_btn3.vc_btn3-color-success:hover, .vc_btn3.vc_btn3-color-success.vc_btn3-style-flat:hover {
+  background-color: #8e3655; /* change button color */
+}
+/* VC Hover Box Design End */
+/* Woocommerce Design */
+.woocommerce-loop-product__title {
+  color: #8e3655; /* product loop title color */
+}
+.woocommerce .bm-product-inner a p {
+  color: #000; /* product loop description color */
+}
+/* Woocommerce Design End */
 /* Shop Page Design */
 /* Fixed sidebar */
 /* .tax-product_cat #primary {
@@ -165,6 +193,7 @@ img.fa {
   position: fixed;
   left: calc((100vw - 1170px) /2);
 } */
+/* Shop Page Design End */
 /* ----- Responsive Styles Large Devices ----- */
 @media screen and (min-width:1040px) {
 
@@ -183,6 +212,7 @@ img.fa {
   .home-page #page {
     padding-top: 0; /* remove padding top */
   }
+  /* Row Hero Design */
   .title-large {
     font-size: 1.5em !important; /* resize row title font size */
   }
@@ -191,6 +221,15 @@ img.fa {
   }
   .row-hero1 .fa, .row-hero2 .fa {
     font-size: 1.5em; /* resize herolink icon size */
+  }
+  .row-hero2 {
+    margin-bottom: 0; /* row2 bottom spacing */
+  }
+  #hwl-herolink {
+    margin-bottom: 1.5rem !important; /* herolink bottom spacing */
+  }
+  .empty-space {
+    height: 1.5rem !important; /* mobile empty space height */
   }
   .entry-content, .entry-summary, .mu_register {
     font-size: .8125em; /* resize herolink text size */
@@ -206,6 +245,15 @@ img.fa {
     vertical-align: middle;
     line-height: normal;
   }
+  /* Row Hero Design End */
+  /* VC Hover Box Design */
+  .vc-hoverbox-wrapper, .vc-hoverbox-block {
+    max-height: 100px; /* vc hoverbox resized */
+  }
+  .pm-hover-box h2 {
+    margin-top: 0; /* remove h2 top margin */
+  }
+  /* VC Hover Box Design End */
 }
 /* ========== /SITE SPECIFIC CSS ========== */
 
