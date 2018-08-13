@@ -97,4 +97,24 @@ function shortcode_my_orders( $atts ) {
 }
 add_shortcode('my_orders', 'shortcode_my_orders');
 
+// Add Footer widget
+function pm_register_sidebar() {
+	register_sidebar(array(
+		'name' => 'Extra Menu Footer Widget',
+		'id' => 'extra-menu-footer-widget',
+		'before_widget' => '<div class="extra-menu-footer">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
+	));
+}
+add_action( 'widgets_init', 'pm_register_sidebar' );
+
+function pm_footer_widget () {
+	echo '<div class="footer-widget">';
+	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('extra-menu-footer-widget') ) ;
+	echo '</div>';
+}
+add_action('wp_footer', 'pm_footer_widget');
+
 ?>

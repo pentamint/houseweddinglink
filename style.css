@@ -92,6 +92,9 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
   max-height: 550px;
   object-fit: cover;
 }
+.bb-marketplace.page-template-homepage #main-wrap .button:not(.more):not(.product_type_simple):not(.product_type_auction) {
+  padding: 4px 10px 6px 10px; /* button padding */
+}
 /* Herobanner Design End */
 /* Herolink Design */
 .row-hero1, .row-hero2 {
