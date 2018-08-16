@@ -76,14 +76,25 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
 /* Mobile Header Design */
 #mobile-header { /* change mobile header background */
   background-color: #6dad98;
-  position: relative; /* detach overlapping header and innerwrap */
 }
+/* Subheader Design */
 .home #mobile-header {
   margin-bottom: 5px; /* add bottom spacing home header */
 }
-.is-mobile .subheader {
-  display: none; /* remove category menu */
+.home.is-mobile .subheader {
+  position: relative; /* move child outside of parent */
+  height: 0; /* hide category bar */
 }
+.home nav.subheader .header-cart { /* moving home cart icon */
+  position: fixed; /* move child outside of parent */
+  top: 10px;
+  right: 30px;
+  z-index: 999999;
+}
+.home nav.subheader .header-cart a span::before {
+  color: #fff; /* change icon color */
+}
+/* Subheader Design End */
 /* Herobanner Design */
 .bb-slider-container {
   max-height: 550px;
@@ -93,7 +104,7 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
   object-fit: cover;
 }
 .bb-marketplace.page-template-homepage #main-wrap .button:not(.more):not(.product_type_simple):not(.product_type_auction) {
-  padding: 4px 10px 6px 10px; /* button padding */
+  padding: 8px 10px 6px 10px; /* button padding */
 }
 /* Herobanner Design End */
 /* Herolink Design */
@@ -209,11 +220,19 @@ img.fa {
 }
 /* ----- Responsive Styles Smartphones ----- */
 @media screen and (max-width:480px) {
-  .right-btn:before {
-    font-size: 2rem; /* resize hamburger menu */
+  .right-btn::before {
+    font-size: 20px; /* resize hamburger menu */
   }
   .home-page #page {
     padding-top: 0; /* remove padding top */
+  }
+  /* Herobanner Design */
+  .bb-slider-container {
+    max-height: 150px;
+  }
+  .bb-slide img {
+    max-height: 150px;
+    object-fit: cover;
   }
   /* Row Hero Design */
   .title-large {
@@ -257,6 +276,43 @@ img.fa {
     margin-top: 0; /* remove h2 top margin */
   }
   /* VC Hover Box Design End */
+  /* Footer Design */
+  .footer-style-2 .widget #footer-icons, .footer-widget #switch-mode,.footer-style-2 .footer-widget:nth-child(3) {
+    display: none;  /* Remove footer modules */
+  }
+  .footer-inner-top {
+    padding: 40px 0 40px 0; /* adjust padding */
+  }
+  /* Bottom button design */
+  .footer-widget .extra-menu-footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999999;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid rgba(0,0,0,.06);
+  }
+  .footer-widget .extra-menu-footer #menu-footer-menu {
+    text-align: center;
+    margin: 0;
+  }
+  .footer-widget .extra-menu-footer #menu-footer-menu li {
+    display: inline-block;
+    width: 25%;
+    padding: 5px;
+    background-color: #8e3655;
+    margin-right: 20px;
+  }
+  .footer-widget .extra-menu-footer #menu-footer-menu li:last-child {
+    margin-right: 0;
+  }
+  .footer-widget .extra-menu-footer #menu-footer-menu li a {
+    color: #fff;
+  }
+  /* Bottom button design end */
+  /* Footer Design End */
 }
 /* ========== /SITE SPECIFIC CSS ========== */
 
