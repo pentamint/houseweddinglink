@@ -190,7 +190,6 @@ img.fa {
   background-color: #8e3655; /* change button color */
 }
 /* VC Hover Box Design End */
-/* Woocommerce Design */
 .woocommerce-loop-product__title {
   color: #8e3655; /* product loop title color */
 }
@@ -216,6 +215,47 @@ img.fa {
 @media screen and (min-width:481px) {
   .site-header .site-title {
     width: 9em;
+  }
+  .home-page #page {
+    padding-top: 0; /* remove padding top */
+  }
+  /* Floating button design */
+  .extra-menu-footer {
+    position: fixed;
+    right: 0;
+    top: calc(50vh);
+    transform: translate(0,-55%);
+    z-index: 666;
+  }
+  .extra-menu-footer ul li {
+    height: 5em;
+    display: table-row;
+    background-color: #8e3655;
+  }
+  .extra-menu-footer ul li a {
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .extra-menu-footer ul li a::before {
+    border-style: solid;
+    border-width: 1px 20px 0px;
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    display: block;
+    left: 34px;
+  }
+  .extra-menu-footer ul li:nth-child(1) a::before {
+    display: none;
+  }
+  .extra-menu-footer ul li:nth-child(2) a::before {
+    top: 70px;
+  }
+  .extra-menu-footer ul li:nth-child(3) a::before {
+    top: 140px;
   }
 }
 /* ----- Responsive Styles Smartphones ----- */
@@ -268,6 +308,10 @@ img.fa {
     line-height: normal;
   }
   /* Row Hero Design End */
+  /* Inner Page */
+  .woocommerce .woocommerce-result-count::before {
+    
+  }
   /* VC Hover Box Design */
   .vc-hoverbox-wrapper, .vc-hoverbox-block {
     max-height: 100px; /* vc hoverbox resized */
