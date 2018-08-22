@@ -190,15 +190,69 @@ img.fa {
   background-color: #8e3655; /* change button color */
 }
 /* VC Hover Box Design End */
+/* Woocommerce Design */
 .woocommerce-loop-product__title {
   color: #8e3655; /* product loop title color */
 }
 .woocommerce .bm-product-inner a p {
   color: #000; /* product loop description color */
 }
+.single-product .store-summary, .is-mobile.single-product .store-summary, .woocommerce div.product form.cart div.quantity, .single-product .product_meta {
+  display: none; /* remove unnecessary info */
+}
 /* Woocommerce Design End */
 /* Shop Page Design */
-/* Fixed sidebar */
+.bm-shop.woocommerce .woocommerce-result-count { /* added left spacing for icon */
+  margin-left: 25px;
+}
+.bm-shop.woocommerce .woocommerce-result-count::before { /* added ring icon next to page title */
+  content: url(http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/08/20164116/HWL_logo_ring-02.svg);
+  position: absolute;
+  width: 20px;
+  left: 15px;
+  margin-top: -4px;
+}
+/* Shop Page Design End */
+/* Floating Menu All Device */
+.single-product .extra-menu-footer {
+  display: none; /* hide from single product menu */
+}
+.product-floating-menu-widget #menu-item-2407 {
+  display: none; /* hide on pc */
+}
+.is-mobile .product-floating-menu-widget #menu-item-2407 {
+  display: table-row; /* hide on pc */
+}
+.is-mobile .product-floating-menu-widget #menu-item-2408 {
+  display: none; /* hide on mobile */
+}
+.product-floating-menu-widget {
+  display: none; /* hide from all pages */
+  position: fixed;
+  right: 0;
+  top: calc(50vh);
+  transform: translate(0,-55%);
+  z-index: 666;
+  height: 15em; /* menu height */
+}
+.product-floating-menu-widget ul {
+  background-color: #8e3655;
+}
+.product-floating-menu-widget ul li {
+  height: 5em;
+  display: table-row;
+}
+.product-floating-menu-widget ul li a {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 10px;
+  text-align: center;
+  color: #fff;
+}
+.single-product .product-floating-menu-widget {
+  display: block; /* only show on single product page */
+}
+/* Floating Menu All Device End */
 /* .tax-product_cat #primary {
   margin-left: 305px;
 }
@@ -209,7 +263,6 @@ img.fa {
 /* Shop Page Design End */
 /* ----- Responsive Styles Large Devices ----- */
 @media screen and (min-width:1040px) {
-
 }
 /* ----- Responsive Styles Tablets &amp; Small Devices ----- */
 @media screen and (min-width:481px) {
@@ -227,10 +280,12 @@ img.fa {
     transform: translate(0,-55%);
     z-index: 666;
   }
+  .extra-menu-footer ul {
+    background-color: #8e3655;
+  }
   .extra-menu-footer ul li {
     height: 5em;
     display: table-row;
-    background-color: #8e3655;
   }
   .extra-menu-footer ul li a {
     vertical-align: middle;
@@ -239,6 +294,9 @@ img.fa {
     text-align: center;
     color: #fff;
   }
+  .home .extra-menu-footer ul li a::before {
+    left: 34px;
+  }
   .extra-menu-footer ul li a::before {
     border-style: solid;
     border-width: 1px 20px 0px;
@@ -246,7 +304,7 @@ img.fa {
     position: absolute;
     border-color: #fff;
     display: block;
-    left: 34px;
+    left: 41px;
   }
   .extra-menu-footer ul li:nth-child(1) a::before {
     display: none;
@@ -259,12 +317,31 @@ img.fa {
   }
 }
 /* ----- Responsive Styles Smartphones ----- */
+@media screen and (max-width:900px) {
+  .bm-shop.sidebar-left #secondary, .bm-shop.sidebar-right #secondary {
+    position: absolute; /* moved sidebar to top of page */
+    top: 20px; /* under 900px top sidebar top spacing */
+  }
+  .bm-shop-page:not(.bm-vendor-shop).woocommerce-page .site, .bm-shop:not(.bm-vendor-shop).woocommerce-page .site {
+    padding-top: 160px; /* open page spacing for top sidebar */
+  }
+  .bm-shop #secondary .widget {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width:480px) {
   .right-btn::before {
     font-size: 20px; /* resize hamburger menu */
   }
   .home-page #page {
     padding-top: 0; /* remove padding top */
+  }
+  .bm-shop.woocommerce .store-filters {
+    margin-bottom: 0; /* resize shop page filter bottom spacing */
+  }
+  .bm-shop.sidebar-left #secondary, .bm-shop.sidebar-right #secondary {
+    top: 120px; /* under 480px top sidebar top spacing */
   }
   /* Herobanner Design */
   .bb-slider-container {
@@ -308,10 +385,6 @@ img.fa {
     line-height: normal;
   }
   /* Row Hero Design End */
-  /* Inner Page */
-  .woocommerce .woocommerce-result-count::before {
-    
-  }
   /* VC Hover Box Design */
   .vc-hoverbox-wrapper, .vc-hoverbox-block {
     max-height: 100px; /* vc hoverbox resized */

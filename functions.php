@@ -97,10 +97,10 @@ function shortcode_my_orders( $atts ) {
 }
 add_shortcode('my_orders', 'shortcode_my_orders');
 
-// Add Footer widget
+// Add floating menu widget
 function pm_register_sidebar() {
 	register_sidebar(array(
-		'name' => 'Extra Menu Footer Widget',
+		'name' => 'Floating Menu',
 		'id' => 'extra-menu-footer-widget',
 		'before_widget' => '<div class="extra-menu-footer">',
 		'after_widget' => '</div>',
@@ -116,5 +116,25 @@ function pm_footer_widget () {
 	echo '</div>';
 }
 add_action('wp_footer', 'pm_footer_widget');
+
+// Add single product foating menu widget
+function pm_register_sidebar2() {
+	register_sidebar(array(
+		'name' => 'Product Floating Menu',
+		'id' => 'product-floating-menu-widget',
+		'before_widget' => '<div class="product-floating-menu-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
+	));
+}
+add_action( 'widgets_init', 'pm_register_sidebar2' );
+
+function pm_footer_widget2 () {
+	echo '<div class="footer-widget">';
+	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('product-floating-menu-widget') ) ;
+	echo '</div>';
+}
+add_action('wp_footer', 'pm_footer_widget2');
 
 ?>
