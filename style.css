@@ -203,7 +203,6 @@ img.fa {
 .single-product .store-summary, .is-mobile.single-product .store-summary, .woocommerce div.product form.cart div.quantity, .single-product .product_meta {
   display: none; /* remove unnecessary info */
 }
-/* Woocommerce Design End */
 /* Shop Page Design */
 .bm-shop.woocommerce .woocommerce-result-count { /* added left spacing for icon */
   margin-left: 25px;
@@ -216,6 +215,89 @@ img.fa {
   margin-top: -4px;
 }
 /* Shop Page Design End */
+/* Single Page Attribute Section */
+.single-product .attr-container { /* dont show attr on other pages */
+  display: block;
+}
+.attr-container { /* top and bottom margin reset */
+  display: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.attr-title { /* attr title font */
+    font-size: 18px;
+    font-weight: 700;
+}
+.attr-inner {
+  list-style-type: none;  /* Remove bullet points; allow greater control of positioning */
+  padding: 0;      /* Override defaults for lists */
+  margin: 0;       /* Override defaults for lists */
+  width: 100%;     /* Get the row full width */
+}
+.attr-iconimg, .attr-icon {
+  display: none;
+}
+.attr-on {
+  display: inline-table;
+}
+.attr-inner li {
+  display: inline-block; /* Get all images to show in a row */
+  max-width: 18%;            /* Show 4 logos per row */
+  text-align: center;    /* Centre align the images */
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.attr-inner .attr-lastrow { /* no margin right on last */
+  /* margin-right: 0; */
+}
+.attr-inner li i { /* icon container */
+  width: 50px;
+  height: 50px;
+  border: 1px solid #8e3655;
+  -webkit-box-shadow: 0px 3px 6px 0px #CCCCCC;
+  box-shadow: 0px 3px 6px 0px #CCCCCC;
+}
+.attr-inner li i:before { /* icon styling */
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 24px;
+  color: #8e3655;
+}
+.attr-inner li .icon2 { /* inactive icon border */
+  border: 1px solid #ccc;
+}
+.attr-inner li .icon2:before { /* inactive icon color */
+  color: #ccc;
+}
+/* icon image */
+.attr-inner .img-container { /* image container */
+  display: inline-table;
+  width: 50px;
+}
+.attr-inner .attr-iconimg { /* active image */
+  border: 1px solid #8e3655;
+  -webkit-box-shadow: 0px 3px 6px 0px #CCCCCC;
+  box-shadow: 0px 3px 6px 0px #CCCCCC;
+}
+.attr-inner .attr-iconimg .icon2 { /* inactive image */
+  border: 1px solid #ccc;
+}
+.attr-inner li .attr-text { /* attr text area */
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+/* icon image end */
+@media (max-width: 960px) and (min-width: 501px) {
+    .attr-inner li { width: 50%; } /* Show 2 logos per row on medium devices (tablets, phones in landscape) */
+}
+
+@media (max-width: 500px) {
+    .attr-inner li { width: 100%; } /* On small screens, show one logo per row */
+}
+/* Single Page Attribute Section End */
+/* Woocommerce Design End */
 /* Floating Menu Visibility & Global Settings */
 .single-product .extra-menu-footer { /* xa menu hide single product menu */
   display: none;

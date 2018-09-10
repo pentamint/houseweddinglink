@@ -4,116 +4,75 @@
   <ul class="attr-inner">
     <li>
       <div class="rent">
-        <i class="fas fa-home attr-icon attr-on"></i>
-        <i class="fas fa-home attr-icon icon2"></i>
+        <div class="icon-container">
+          <i class="fas fa-home attr-icon attr-on"></i><i class="fas fa-home attr-icon icon2"></i>
+        </div>
         <p class="attr-text">대관</p>
       </div>
     </li>
     <li>
       <div class="dining">
-        <i class="fas fa-utensils attr-icon attr-on"></i>
-        <i class="fas fa-utensils attr-icon icon2"></i>
+        <div class="icon-container">
+          <i class="fas fa-utensils attr-icon"></i><i class="fas fa-utensils attr-icon icon2 attr-on"></i>
+        </div>
         <p class="attr-text">식사</p>
       </div>
     </li>
     <li>
       <div class="seats">
-        <img class="attr-iconimg attr-icon attr-on" src="" alt=""/>
-        <img class="attr-iconimg attr-icon icon2" src="" alt=""/>
+        <div class="img-container">
+          <img class="attr-iconimg attr-icon attr-on" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/09/03142650/%EC%A2%8C%EC%84%9D-3pt-0828.svg" alt=""/><img class="attr-iconimg attr-icon icon2" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/09/03142652/%EC%A2%8C%EC%84%9D-gary-3pt-0828.svg" alt=""/>
+        </div>
         <p class="attr-text">좌석</p>
       </div>
     </li>
     <li>
       <div class="sound">
-        <i class="fas fa-volume-down attr-icon"></i>
-        <i class="fas fa-volume-down attr-icon icon2 attr-on"></i>
+        <div class="icon-container">
+          <i class="fas fa-volume-down attr-icon"></i><i class="fas fa-volume-down attr-icon icon2 attr-on"></i>
+        </div>
         <p class="attr-text">음향</p>
       </div>
     </li>
     <li>
       <div class="parking">
-        <i class="fas fa-parking attr-icon"></i>
-        <i class="fas fa-parking attr-icon icon2 attr-on"></i>
+        <div class="icon-container">
+          <i class="fas fa-parking attr-icon attr-on"></i><i class="fas fa-parking attr-icon icon2"></i>
+        </div>
         <p class="attr-text">주차</p>
       </div>
     </li>
-    <li class="attr-lastrow">
+    <li>
       <div class="flower">
-        <img class="attr-iconimg attr-icon attr-on" src="" alt=""/>
-        <img class="attr-iconimg attr-icon icon2" src="" alt=""/>
+        <div class="img-container">
+          <img class="attr-iconimg attr-icon" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/09/03142645/%EA%BD%83%EC%9E%A5%EC%8B%9D-3pt-0828.svg" alt=""/><img class="attr-iconimg attr-icon icon2 attr-on" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/09/03142647/%EA%BD%83%EC%9E%A5%EC%8B%9D-gray-3pt-0828.svg" alt=""/>
+        </div>
         <p class="attr-text">꽃장식</p>
       </div>
     </li>
     <li>
       <div class="photo">
-        <i class="fas fa-camera attr-icon attr-on"></i>
-        <i class="fas fa-camera attr-icon icon2"></i>
+        <div class="icon-container">
+          <i class="fas fa-camera attr-icon attr-on"></i><i class="fas fa-camera attr-icon icon2"></i>
+        </div>
         <p class="attr-text">포토</p>
       </div>
     </li>
     <li>
       <div class="coordi">
-        <i class="fas fa-headphones-alt attr-icon"></i>
-        <i class="fas fa-headphones-alt attr-icon icon2 attr-on"></i>
+        <div class="icon-container">
+          <i class="fas fa-headphones attr-icon"></i><i class="fas fa-headphones attr-icon icon2 attr-on"></i>
+        </div>
         <p class="attr-text">진행</p>
       </div>
     </li>
     <li>
       <div class="makeup">
-        <img class="attr-iconimg attr-on" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/08/28161330/makeup-icon-active.svg" alt=""/>
-        <img class="attr-iconimg icon2" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/08/28161330/makeup-icon-active.svg" alt=""/>
+        <div class="img-container">
+          <img class="attr-iconimg attr-icon attr-on" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/09/03142648/%EB%A9%94%EC%9D%B4%ED%81%AC%EC%97%85-3pt-0828.svg" alt=""/><img class="attr-iconimg icon2" src="http://s3-ap-northeast-2.amazonaws.com/houseweddinglink/wp-content/uploads/2018/09/03142649/%EB%A9%94%EC%9D%B4%ED%81%AC%EC%97%85-gray-3pt-0828.svg" alt=""/>
+        </div>
         <p class="attr-text">메이크업</p>
       </div>
     </li>
   </ul>
 </div>
-<style>
-.attr-inner {
-  list-style-type: none;  /* Remove bullet points; allow greater control of positioning */
-  padding: 0;      /* Override defaults for lists */
-  margin: 0;       /* Override defaults for lists */
-  width: 100%;     /* Get the row full width */
-}
-.attr-iconimg, .attr-icon {
-  display: none;
-}
-.attr-on {
-  display: table;
-}
-.attr-inner li {
-  display: inline-block; /* Get all images to show in a row */
-  max-width: 18%;            /* Show 4 logos per row */
-  text-align: center;    /* Centre align the images */
-  margin-right: 20px;
-}
-.attr-inner .attr-lastrow { /* no margin right on last */
-  margin-right: 0;
-}
-.attr-inner li i { /* icon container */
-  width: 75px;
-  height: 75px;
-  border: 1px solid #8e3655;
-  -webkit-box-shadow: 0px 3px 6px 0px #CCCCCC;
-  box-shadow: 0px 3px 6px 0px #CCCCCC;
-}
-.attr-inner li i:before { /* icon */
-  height: 75px;
-  vertical-align: middle;
-  display: table-cell;
-  font-size: 32px;
-  color: #8e3655;
-}
-.attr-inner li .icon2 {
-  border: 1px solid #3d4d3d;
-}
-.attr-inner li .icon2:before {
-  color: #3d4d3d;
-}
-@media (max-width: 960px) and (min-width: 501px) {
-    .attr-inner li { width: 50%; } /* Show 2 logos per row on medium devices (tablets, phones in landscape) */
-}
-
-@media (max-width: 500px) {
-    .attr-inner li { width: 100%; } /* On small screens, show one logo per row */
-}
-</style>
