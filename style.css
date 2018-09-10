@@ -495,11 +495,11 @@ img.fa {
     top: 120px; /* under 480px top sidebar top spacing */
   }
   /* Herobanner Design */
-  .bb-slider-container {
-    max-height: 150px;
+  .bb-slider-container, .slick-track {
+    max-height: 250px;
   }
   .bb-slide img {
-    max-height: 150px;
+    max-height: 250px;
     object-fit: cover;
   }
   /* Row Hero Design */
