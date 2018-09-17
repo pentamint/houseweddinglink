@@ -137,4 +137,24 @@ function pm_footer_widget2 () {
 }
 add_action('wp_footer', 'pm_footer_widget2');
 
+// Toggle social share button
+
+//Register hook to load scripts
+add_action('wp_enqueue_scripts', 'my_togglebtn_script');
+
+//Load scripts (and/or styles)
+function my_togglebtn_script () {
+
+   if(is_page()){ //Check if we are viewing a page
+	global $wp_query;
+
+        //Check which template is assigned to current page we are looking at
+        $template_name = get_post_meta( $wp_query->post->ID, '_wp_page_template', true );
+	if($template_name == 'single-product.php'){
+           //If page is using slider portfolio template then load our slider script
+	   wp_enqueue_script('my_toggle_script', get_template_directory_uri() .'/js/togglebtn.js');
+	}
+   }
+}
+
 ?>

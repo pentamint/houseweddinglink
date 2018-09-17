@@ -17,6 +17,7 @@ body { /* default font design */
   font-family: 'Nanum Gothic', 'Roboto', sans-serif;
   font-size: 100%;
   font-weight: normal;
+  line-height: 1.42857143;
 }
 a { /* default link &amp; animation */
   -webkit-transition: all .4s ease-in-out;
@@ -26,7 +27,7 @@ a { /* default link &amp; animation */
 a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
     text-decoration: none !important;
 }
-h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
+h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
   font-family: 'Nanum Gothic', 'Montserrat', sans-serif;
 }
 /* ========== PENTAMINT GLOBAL END ========== */
@@ -34,6 +35,9 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
 /* ========== SITE SPECIFIC CSS ========== */
 .price {
   display: none !important; /* remove pricing */
+}
+.hidden {
+  display: none !important; /* remove class */
 }
 /********** Header Design **********/
 .site-header {
@@ -606,7 +610,9 @@ img.fa {
   }
   .single-product .summary .single_add_to_cart_button { /* xs add to cart button design */
     padding: 5px !important;
-    line-height: 22.75px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.42857143 !important;
     width: 25vw !important;
     float: right !important;
     transform: translate(50%, 0);
@@ -614,14 +620,34 @@ img.fa {
   }
   .single-product .summary .bm-product-to-favorites { /* xs add to cart button design */
     padding: 5px;
-    width: 25vw;
+    width: 11vw;
+    min-width: unset;
     float: unset;
-    height: 32px;
+    height: 30px;
+    font-size: 16px;
     line-height: 0;
     vertical-align: middle;
     display: table-cell;
-    left: 33%;
+    left: calc((33vw - 25vw) + 14vw);
     background-color: #8e3655;
+  }
+  .cosmosfarm-share-button-title { /* xs sns share toggle button */
+    display: table;
+    position: fixed;
+    bottom: 0;
+    left: calc(33vw - 25vw);
+    margin-bottom: 10px !important;
+    z-index: 999999;
+    background-color: #f2f2f2;
+    height: 30px;
+    width: 11vw;
+  }
+  .cosmosfarm-share-button-title img {
+    display: table-cell;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 auto;
+    opacity: 1 !important;
   }
   .footer-widget .extra-menu-footer #menu-floating-menu li:last-child {
     margin-right: 0;

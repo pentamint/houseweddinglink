@@ -1,9 +1,4 @@
-<script>
-function toggle_btn() {
-  var a = document.getElementsByClassName ("cosmosfarm-share-button-title");
-  a.onClick = function() {
-    var b = document.getElementsByClassName ('cosmosfarm-naver cosmosfarm-facebook');
-    b.addClass.classList.toggle('showbtn');
-  }
-}
-</script>
+document.querySelector('.cosmosfarm-share-button-title').addEventListener('click', function() {
+    document.querySelector('.cosmosfarm-naver').classList.toggle('hidden');
+    document.querySelector('.cosmosfarm-facebook').classList.toggle('hidden');
+}, false);
