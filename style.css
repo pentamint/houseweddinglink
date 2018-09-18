@@ -36,9 +36,6 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
 .price {
   display: none !important; /* remove pricing */
 }
-.hidden {
-  display: none !important; /* remove class */
-}
 /********** Header Design **********/
 .site-header {
   background: #6dad98; /* old browsers */
@@ -102,7 +99,7 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
 /********** Header Design End **********/
 /********** Home Content **********/
 /* Herobanner Design */
-.bb-slider-container {
+.bb-slider-container, .bb-slider-wrapper {
   max-height: 550px;
 }
 .bb-slide img {
@@ -116,8 +113,6 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
 /* Herolink Design */
 .row-hero1, .row-hero2 {
   margin-bottom: 2em;
-  margin-right: 15px !important; /* alignment fix */
-  margin-left: -15px !important; /* alignment fix */
 }
 .col-xs-2 {
   background-color: #6dad98;
@@ -499,7 +494,7 @@ img.fa {
     top: 120px; /* under 480px top sidebar top spacing */
   }
   /* Herobanner Design */
-  .bb-slider-container, .slick-track {
+  .bb-slider-container, .bb-slider-wrapper, .slick-track {
     max-height: 250px;
   }
   .bb-slide img {
@@ -510,8 +505,9 @@ img.fa {
   .title-large {
     font-size: 1.5em !important; /* resize row title font size */
   }
-  .row-hero1, .row-hero2 {
-    margin-right: -15px !important; /* counter patch desktop herorow layout fix */
+  .row-hero1, .row-hero2 { /* xs hero row width fix */
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .row-hero1 .fa, .row-hero2 .fa {
     font-size: 1.5em; /* resize herolink icon size */
@@ -631,6 +627,7 @@ img.fa {
     left: calc((33vw - 25vw) + 14vw);
     background-color: #8e3655;
   }
+    /* SNS button settings */
   .cosmosfarm-share-button-title { /* xs sns share toggle button */
     display: table;
     position: fixed;
@@ -641,14 +638,38 @@ img.fa {
     background-color: #f2f2f2;
     height: 30px;
     width: 11vw;
+    border: 1px solid #ccc;
+    padding: 0 3px 0 0;
   }
-  .cosmosfarm-share-button-title img {
-    display: table-cell;
+  .cosmosfarm-share-button-title img { /* sns share button image */
+    display: table;
     width: 30px !important;
     height: 30px !important;
     margin: 0 auto;
     opacity: 1 !important;
   }
+  .cosmosfarm-share-button { /* all sns buttons */
+    display: none !important;
+    position: fixed;
+    bottom: 50px;
+    z-index: 999999;
+  }
+  .cosmosfarm-share-button:hover { /* all sns buttons hover */
+    padding: 6px 14px !important;
+  }
+  .cosmosfarm-share-button img { /* sns share button image */
+    opacity: 1 !important;
+  }
+  .cosmosfarm-facebook { /* sns facebook button */
+    left: calc(33vw - 25vw + 28px);
+  }
+  .cosmosfarm-naver { /* sns naver button */
+    left: calc(33vw - 25vw - 14px);
+  }
+  .showbtn {
+    display: block !important; /* remove class */
+  }
+    /* sns button settings end */
   .footer-widget .extra-menu-footer #menu-floating-menu li:last-child {
     margin-right: 0;
   }
