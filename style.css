@@ -36,9 +36,6 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
 .price {
   display: none !important; /* remove pricing */
 }
-.showbtn {
-  display: block !important; /* show SNS share button */
-}
 /********** Header Design **********/
 .site-header {
   background: #6dad98; /* old browsers */
@@ -671,16 +668,30 @@ img.fa {
   .cosmosfarm-share-button img { /* sns share button image */
     opacity: 1 !important;
   }
-  .cosmosfarm-facebook { /* sns facebook button */
-    left: calc(33vw - 25vw + 28px);
-  }
+  /* sns toggle button positions */
   .cosmosfarm-naver { /* sns naver button */
     left: calc(33vw - 25vw - 14px);
   }
+  .cosmosfarm-facebook { /* sns facebook button */
+    left: calc(33vw - 25vw + 28px);
+  }
+  .cosmosfarm-kakaotalk {
+    left: calc(33vw - 25vw + 70px);
+  }
+  .cosmosfarm-band {
+    left: calc(33vw - 25vw + 112px);
+  }
+  .cosmosfarm-kakaostory {
+    left: calc(33vw - 25vw + 154px);
+  }
+  .cosmosfarm-line {
+    left: calc(33vw - 25vw + 196px);  
+  }
+  /* sns toggle button positions */
   .showbtn {
     display: block !important; /* remove class */
   }
-    /* sns button settings end */
+  /* sns button settings end */
   .footer-widget .extra-menu-footer #menu-floating-menu li:last-child {
     margin-right: 0;
   }
