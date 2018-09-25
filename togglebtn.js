@@ -1,4 +1,7 @@
-document.querySelector('.cosmosfarm-share-button-title').addEventListener('click', function() {
-    document.querySelector('.cosmosfarm-naver').classList.toggle('showbtn');
-    document.querySelector('.cosmosfarm-facebook').classList.toggle('showbtn');
+// ELement toggle add class
+window.onload=function(){
+document.querySelectorAll('.cosmosfarm-share-button-title')[0].addEventListener('click', function() {
+    document.querySelectorAll('.cosmosfarm-naver')[0].classList.toggle('showbtn');
+    document.querySelectorAll('.cosmosfarm-facebook')[0].classList.toggle('showbtn');
 }, false);
+}

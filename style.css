@@ -36,6 +36,9 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
 .price {
   display: none !important; /* remove pricing */
 }
+.showbtn {
+  display: block !important; /* show SNS share button */
+}
 /********** Header Design **********/
 .site-header {
   background: #6dad98; /* old browsers */
@@ -296,8 +299,16 @@ img.fa {
     .attr-inner li { width: 100%; } /* On small screens, show one logo per row */
 }
 /* Single Page Attribute Section End */
+/* Single Page Tab Section */
+.wc-tabs {
+  display: none !important;
+}
+.woocommerce-Tabs-panel--description > h2:nth-child(1) {
+  display: none;
+}
+/* Single Page Tab Section End */
 /* Woocommerce Design End */
-/* Floating Menu Visibility & Global Settings */
+/* Floating Menu Visibility &amp; Global Settings */
 .single-product .extra-menu-footer { /* xa menu hide single product menu */
   display: none;
 }
@@ -319,7 +330,7 @@ img.fa {
 .extra-menu-footer ul li a:hover, .product-floating-menu-widget ul li a:hover { /* xa add hover background color */
   background-color: #333;
 }
-/* Floating Menu Visibility & Global Settings End */
+/* Floating Menu Visibility &amp; Global Settings End */
 /* .tax-product_cat #primary {
   margin-left: 305px;
 }
