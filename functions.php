@@ -1,4 +1,3 @@
-
 <?php
 /**
  * @package OneSocial Child Theme
@@ -146,11 +145,11 @@ function sns_button_script () {
 }
 add_action( 'wp_enqueue_scripts', 'sns_button_script');
 
+// Hide search button on right panel active
+function search_btn_hide () {
 
+    wp_enqueue_script('search_btn_script', get_stylesheet_directory_uri().'/js/searchbtnhide.js', array('jquery'),filemtime(get_stylesheet_directory() . '/js/searchbtnhide.js' ));
+}
+add_action( 'wp_enqueue_scripts', 'search_btn_hide');
 
-
-
-
-
-)
 ?>
