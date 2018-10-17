@@ -1,4 +1,4 @@
-/*
+/* =========================================================
 Theme Name:     Pentamint Custom Onesocial Theme
 Theme URI:      https://www.pentamint.com
 Description:    Pentamint customizations for Onesocial Theme
@@ -6,12 +6,19 @@ Author:         Pentamint Co., Ltd.
 Author URI:     https://www.pentamint.com
 Template:       Pentamint Onesocial
 Version:        1.0.3
-*/
 
-/*  */
+CSS Table of Contents SMACSS
+  1. Base
+  2. Layout
+  3. Module
+  4. State
+  5. Theme
+  ========================================================= */
+
+/* =========================================================
+  1. BASE
+  ========================================================= */
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-
-/* ========== PENTAMINT GLOBAL ========== */
 body { /* default font design */
   -webkit-tap-highlight-color: transparent;
   word-break: keep-all;
@@ -31,7 +38,45 @@ a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click
 h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
   font-family: '나눔고딕', 'Montserrat', sans-serif;
 }
-/* ========== PENTAMINT GLOBAL END ========== */
+/* =========================================================
+  1. /BASE
+  ========================================================= */
+
+/* =========================================================
+  2. LAYOUT
+  ========================================================= */
+@media screen and (max-width: 768px) and (min-width: 380px) {
+  .page-template-homepage .woocommerce .products ul, .page-template-homepage .woocommerce ul.products, .is-mobile.woocommerce .products ul, .is-mobile.woocommerce ul.products { /* product columns alignment fix */
+    margin-right: -10px;
+  }
+}
+/* =========================================================
+  2. /LAYOUT
+  ========================================================= */
+
+/* =========================================================
+  3. MODULE
+  ========================================================= */
+
+/* =========================================================
+  3. /MODULE
+  ========================================================= */
+
+/* =========================================================
+  4. STATE
+  ========================================================= */
+
+/* =========================================================
+  4. /STATE
+  ========================================================= */
+
+/* =========================================================
+  5. THEME
+  ========================================================= */
+
+/* =========================================================
+  5. /THEME
+  ========================================================= */
 
 /* ========== SITE SPECIFIC CSS ========== */
 /********** Header Design **********/
@@ -529,13 +574,32 @@ img.fa {
 }
 /* ----- Responsive Styles Smartphones ----- */
 @media screen and (max-width:900px) {
+  .bm-shop #secondary .widget { /* mobile sidebar padding */
+    padding-bottom: 10px;
+  }
+  /* Sidebar move to Top of Page */
+  .bm-shop.sidebar-left #main, .bm-shop.sidebar-left .page-right-sidebar, .bm-shop.sidebar-right #main, .bm-shop.sidebar-right .page-right-sidebar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .bm-shop.sidebar-left #primary, .bm-shop.sidebar-right #primary {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
   .bm-shop.sidebar-left #secondary, .bm-shop.sidebar-right #secondary {
-    position: absolute; /* moved sidebar to top of page */
-    top: 20px; /* under 900px top sidebar top spacing */
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
   }
-  .bm-shop-page:not(.bm-vendor-shop).woocommerce-page .site, .bm-shop:not(.bm-vendor-shop).woocommerce-page .site {
-    padding-top: 160px; /* open page spacing for top sidebar */
-  }
+  /* /Sidebar move to Top of Page */
   .bm-shop #secondary .widget {
     width: 95%;
     margin: 0 auto;
