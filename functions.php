@@ -152,4 +152,32 @@ function search_btn_hide () {
 }
 add_action( 'wp_enqueue_scripts', 'search_btn_hide');
 
+// Add product-attr.php for venue category
+add_action( 'woocommerce_single_product_summary', 'my_single_product_summary', 2 );
+function my_single_product_summary(){
+    global $product;
+
+    if ( is_singular('product') && (has_term( 'venue', 'product_cat')) ) {
+      remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+      add_action( 'woocommerce_single_product_summary', 'my_custom_single_excerpt', 20 );
+    }
+}
+
+function my_custom_single_excerpt(){
+    global $post, $product;
+
+    $short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
+
+    if ( ! $short_description )
+        return;
+
+    // The custom text
+    $custom_text = get_template_part( '/woocommerce/product', 'attr' );
+
+    ?>
+    <div class="woocommerce-product-details__short-description">
+        <?php echo $short_description . $custom_text; // WPCS: XSS ok. ?>
+    </div>
+    <?php
+}
 ?>
