@@ -176,7 +176,7 @@ function my_custom_single_excerpt(){
 
     ?>
     <div class="woocommerce-product-details__short-description">
-        <?php echo $short_description . $custom_text; // WPCS: XSS ok. ?>
+        <?php echo $custom_text; // WPCS: XSS ok. ?>
     </div>
     <?php
 }
