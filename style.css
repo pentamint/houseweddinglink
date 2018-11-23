@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
   ========================================================= */
 /* ----- Woocommerce ----- */
 .related.products { /* 연관상품 지움 */
-  visibility: hidden;
+  display: none;
 }
 /* ----- /Woocommerce ----- */
 /* =========================================================
